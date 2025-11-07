@@ -160,3 +160,72 @@ footer {
     color: #333;
     font-weight: 500;
 }
+/* ---------- BOTÃO DE MODO NOTURNO ---------- */
+#btnDarkMode {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+#btnDarkMode:hover {
+    background-color: #555;
+    transform: scale(1.05);
+}
+/* ---------- ESTILO DO MODO NOTURNO ---------- */
+body.dark {
+    background-color: #1b1b1b;
+    color: #eee;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+body.dark h1, 
+body.dark h2, 
+body.dark h3 {
+    color: #ffcc66;
+}
+
+body.dark blockquote {
+    background-color: #2e2e2e;
+    border-left: 5px solid #ffb703;
+    color: #ddd;
+}
+
+body.dark .card {
+    background-color: #ffb703;
+    color: #1b1b1b;
+}
+
+body.dark table {
+    background-color: #2e2e2e;
+    color: #fff;
+    border-color: #444;
+}
+
+body.dark th {
+    background-color: #ff7b00;
+}
+
+body.dark td {
+    border: 1px solid #555;
+}
+
+body.dark footer {
+    background-color: #333;
+    color: #ffb703;
+}
+
+body.dark #btnDica {
+    background-color: #ffb703;
+    color: #1b1b1b;
+}
+
+body.dark #btnDarkMode {
+    background-color: #ffb703;
+    color: #1b1b1b;
+}

@@ -38,3 +38,25 @@ cards.forEach(card => {
         card.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.2)";
     });
 });
+// ---------- MODO NOTURNO ----------
+const btnDarkMode = document.getElementById("btnDarkMode");
+
+// Verifica se o usuário já tinha ativado o modo noturno
+if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark");
+    btnDarkMode.textContent = "☀️ Desativar modo noturno";
+}
+
+// Alterna o modo noturno ao clicar
+btnDarkMode.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+
+    // Atualiza o texto do botão
+    const darkAtivo = document.body.classList.contains("dark");
+    btnDarkMode.textContent = darkAtivo
+        ? "☀️ Desativar modo noturno"
+        : "🌙 Ativar modo noturno";
+
+    // Salva a preferência no localStorage
+    localStorage.setItem("darkMode", darkAtivo);
+});
